@@ -1,0 +1,21 @@
+node_modules/
+.output/
+.wxt/
+*.tsbuildinfo
+
+# Env / secrets
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Zip artifacts
+*.zip

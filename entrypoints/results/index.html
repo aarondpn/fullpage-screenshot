@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screenshot Results</title>
+    <script src="/theme-init.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="top-bar">
+        <h1>Full Page Screenshot</h1>
+        <button id="theme-toggle" class="theme-toggle" title="Toggle theme">◑</button>
+      </header>
+
+      <nav class="tab-bar">
+        <button class="tab active" data-tab="result">Result</button>
+        <button class="tab" data-tab="history">History</button>
+        <button class="tab" data-tab="settings">Settings</button>
+      </nav>
+
+      <!-- Result tab -->
+      <div id="tab-result" class="tab-panel active">
+        <div id="loading" class="loading">Loading capture data...</div>
+
+        <div id="result-view" class="result-view hidden">
+          <div id="multi-tile-warning" class="warning-banner hidden">
+            This page is too tall for a single image (browser canvas limit: 16 384px).
+            The screenshot has been split into multiple images. Use <strong>Download PDF</strong> to get a single combined file.
+          </div>
+
+          <div class="meta">
+            <p id="page-url" class="page-url"></p>
+            <p id="capture-info" class="capture-info"></p>
+          </div>
+
+          <div class="actions">
+            <button id="download-btn" class="btn-primary">Download</button>
+            <button id="copy-btn" class="btn-primary">Copy to Clipboard</button>
+            <button id="pdf-btn" class="btn-primary">Download PDF</button>
+          </div>
+
+          <div id="tiles-container" class="tiles-container"></div>
+        </div>
+      </div>
+
+      <!-- History tab -->
+      <div id="tab-history" class="tab-panel">
+        <div class="panel-header">
+          <h2>Recent Captures</h2>
+          <button id="clear-history-btn" class="btn-secondary btn-sm">Clear All</button>
+        </div>
+        <div id="history-list" class="history-list">
+          <p class="history-empty">No captures yet.</p>
+        </div>
+      </div>
+
+      <!-- Settings tab -->
+      <div id="tab-settings" class="tab-panel">
+        <h2 class="panel-title">Capture Settings</h2>
+        <div class="settings-form">
+          <div class="setting-row">
+            <label for="format-select">Format</label>
+            <select id="format-select">
+              <option value="png" selected>PNG</option>
+              <option value="jpeg">JPEG</option>
+            </select>
+          </div>
+          <div id="quality-row" class="setting-row hidden">
+            <label for="quality-slider">Quality</label>
+            <div class="range-group">
+              <input type="range" id="quality-slider" min="0.1" max="1" step="0.05" value="0.92" />
+              <span id="quality-value">92%</span>
+            </div>
+          </div>
+          <div class="setting-row">
+            <label for="resolution-select">Resolution</label>
+            <select id="resolution-select">
+              <option value="full">Retina (full DPR)</option>
+              <option value="standard" selected>Standard (1x)</option>
+            </select>
+          </div>
+          <div class="setting-row">
+            <label for="auto-capture-toggle">Auto-capture</label>
+            <label class="toggle">
+              <input type="checkbox" id="auto-capture-toggle" checked />
+              <span class="toggle-label" id="auto-capture-label">On</span>
+            </label>
+          </div>
+        </div>
+        <p class="settings-note">Changes are saved automatically and apply to your next capture.</p>
+      </div>
+    </div>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

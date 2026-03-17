@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Page Screenshot</title>
+    <script src="/theme-init.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Full Page Screenshot</h1>
+
+      <!-- Capture button -->
+      <button id="capture-btn" class="capture-btn">Capture Full Page</button>
+
+      <!-- Progress -->
+      <div id="progress-section" class="progress-section hidden">
+        <p id="progress-label" class="progress-label">Capturing page...</p>
+        <div class="progress-row">
+          <div class="progress-bar-container">
+            <div id="progress-bar" class="progress-bar"></div>
+          </div>
+          <span id="progress-text" class="progress-text">0/0</span>
+        </div>
+        <button id="cancel-btn" class="cancel-btn">Cancel</button>
+      </div>
+
+      <!-- Error -->
+      <div id="error-section" class="error-section hidden">
+        <p id="error-message"></p>
+      </div>
+    </div>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

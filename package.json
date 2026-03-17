@@ -1,0 +1,28 @@
+{
+  "name": "fullpage-screenshot",
+  "version": "1.0.0",
+  "description": "Full page screenshot browser extension",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt --browser firefox",
+    "build": "wxt build",
+    "build:firefox": "wxt build --browser firefox",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip --browser firefox"
+  },
+  "packageManager": "pnpm@10.18.3",
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "wxt": "^0.20.20"
+  },
+  "dependencies": {
+    "@webext-core/messaging": "^2.3.0",
+    "jspdf": "^4.2.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
