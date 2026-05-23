@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@webext-core/messaging':
-        specifier: ^2.3.0
-        version: 2.3.0
+        specifier: ^3.0.1
+        version: 3.0.1
       jspdf:
         specifier: ^4.2.1
         version: 4.2.1
@@ -36,6 +36,9 @@ packages:
     peerDependenciesMeta:
       rollup:
         optional: true
+
+  '@aklinker1/zero-serialize-error@1.0.2':
+    resolution: {integrity: sha512-hGVkgFqb8Zs80JJ7MOSCGQXH2SyWfwnJwOl8Qpp1lUdkp5T7GTf8QrAMib42Hnzx6HtnNYdmNaSSg4MQy+MDRQ==}
 
   '@babel/code-frame@7.29.0':
     resolution: {integrity: sha512-9NhCeYjq9+3uxgdtp20LSiJXJvN0FeCtNGpJxuMFZ1Kv3cWUNb6DOhJwUvcVCzKGR66cw4njwM6hrJLqgOwbcw==}
@@ -260,10 +263,6 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@lukeed/csprng@1.1.0':
-    resolution: {integrity: sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==}
-    engines: {node: '>=8'}
-
   '@napi-rs/wasm-runtime@1.1.4':
     resolution: {integrity: sha512-3NQNNgA1YSlJb/kMH1ildASP9HW7/7kYnRI2szWJaofaS1hWmbGI4H+d3+22aGzXXN9IJ+n+GiFVcGipJP18ow==}
     peerDependencies:
@@ -416,8 +415,8 @@ packages:
   '@webext-core/match-patterns@1.0.3':
     resolution: {integrity: sha512-NY39ACqCxdKBmHgw361M9pfJma8e4AZo20w9AY+5ZjIj1W2dvXC8J31G5fjfOGbulW9w4WKpT8fPooi0mLkn9A==}
 
-  '@webext-core/messaging@2.3.0':
-    resolution: {integrity: sha512-gChSVKdRs7JEq5hFH0jVROSvTq+sKq9afXTA/gBswep3RWNLhXyDsXFlvPMkYbmML1XZ8QKKC9ou2MlCKRZwSQ==}
+  '@webext-core/messaging@3.0.1':
+    resolution: {integrity: sha512-xZ1DTIm/ZHBqKUf1+DczTywbF9MKeJ9ib3iUQIilh9o/2ETYprDDL+Gk5p28GEF82YW5+M2G7LVGpySfcvNpkg==}
 
   '@wxt-dev/browser@0.1.40':
     resolution: {integrity: sha512-h2/v/Hpkj5sz//h84ProqBaAcTsDFRKp9b/JVHOK/r7LT0XLE+ZDs5YN1BnFLUEHdM7G3fUjTyBG84cayXQshQ==}
@@ -1421,10 +1420,6 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  serialize-error@11.0.3:
-    resolution: {integrity: sha512-2G2y++21dhj2R7iHAdd0FIzjGwuKZld+7Pl/bTU6YIkrC2ZMbVUjm+luj6A6V34Rv9XfKJDKpTWu9W4Gse1D9g==}
-    engines: {node: '>=14.16'}
-
   set-value@4.1.0:
     resolution: {integrity: sha512-zTEg4HL0RwVrqcWs3ztF+x1vkxfm0lP+MQQFPiMJTKVceBwEV0A569Ou8l9IYQG8jOZdMVI1hGsc0tmeD2o/Lw==}
     engines: {node: '>=11.0'}
@@ -1557,10 +1552,6 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  type-fest@2.19.0:
-    resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
-    engines: {node: '>=12.20'}
-
   type-fest@3.13.1:
     resolution: {integrity: sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==}
     engines: {node: '>=14.16'}
@@ -1582,10 +1573,6 @@ packages:
 
   uhyphen@0.2.0:
     resolution: {integrity: sha512-qz3o9CHXmJJPGBdqzab7qAYuW8kQGKNEuoHFYrBwV6hWIMcpAmxDLXojcHfFr9US1Pe6zUswEIJIbLI610fuqA==}
-
-  uid@2.0.2:
-    resolution: {integrity: sha512-u3xV3X7uzvi5b1MncmZo3i2Aw222Zk1keqLA1YkHldREkAhAqi65wuPfe7lHx8H/Wzy+8CE7S7uS3jekIM5s8g==}
-    engines: {node: '>=8'}
 
   undici-types@7.19.2:
     resolution: {integrity: sha512-qYVnV5OEm2AW8cJMCpdV20CDyaN3g0AjDlOGf1OW4iaDEx8MwdtChUp4zu4H0VP3nDRF/8RKWH+IPp9uW0YGZg==}
@@ -1618,6 +1605,7 @@ packages:
 
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   vite-node@6.0.0:
@@ -1774,6 +1762,8 @@ snapshots:
       source-map: 0.7.6
       yargs: 17.7.2
 
+  '@aklinker1/zero-serialize-error@1.0.2': {}
+
   '@babel/code-frame@7.29.0':
     dependencies:
       '@babel/helper-validator-identifier': 7.28.5
@@ -1926,8 +1916,6 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@lukeed/csprng@1.1.0': {}
-
   '@napi-rs/wasm-runtime@1.1.4(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)':
     dependencies:
       '@emnapi/core': 1.9.2
@@ -2039,10 +2027,9 @@ snapshots:
 
   '@webext-core/match-patterns@1.0.3': {}
 
-  '@webext-core/messaging@2.3.0':
+  '@webext-core/messaging@3.0.1':
     dependencies:
-      serialize-error: 11.0.3
-      uid: 2.0.2
+      '@aklinker1/zero-serialize-error': 1.0.2
       webextension-polyfill: 0.10.0
 
   '@wxt-dev/browser@0.1.40':
@@ -3027,10 +3014,6 @@ snapshots:
 
   semver@7.7.4: {}
 
-  serialize-error@11.0.3:
-    dependencies:
-      type-fest: 2.19.0
-
   set-value@4.1.0:
     dependencies:
       is-plain-object: 2.0.4
@@ -3155,8 +3138,6 @@ snapshots:
 
   tslib@2.8.1: {}
 
-  type-fest@2.19.0: {}
-
   type-fest@3.13.1: {}
 
   type-fest@4.41.0: {}
@@ -3168,10 +3149,6 @@ snapshots:
   ufo@1.6.3: {}
 
   uhyphen@0.2.0: {}
-
-  uid@2.0.2:
-    dependencies:
-      '@lukeed/csprng': 1.1.0
 
   undici-types@7.19.2: {}
 
